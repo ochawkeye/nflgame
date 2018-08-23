@@ -176,7 +176,7 @@ def meta_from_soup_row(team, soup_row):
     if ',' not in name:
         last_name, first_name = name, ''
     else:
-        last_name, first_name = map(lambda s: s.strip(), name.split(','))
+        last_name, first_name = map(lambda s: s.strip(), name.split(','))[:2]
 
     return {
         'team': team,
