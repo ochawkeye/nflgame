@@ -16,6 +16,7 @@ def _create_schedule(jsonf=None):
     dictionaries with the following keys: week, month, year, home,
     away, wday, gamekey, season_type, time.
     """
+    print "...back again"
     day = 60 * 60 * 24
     if jsonf is None:
         jsonf = _sched_json_file
@@ -41,6 +42,7 @@ def _create_schedule(jsonf=None):
             last_updated = datetime.datetime.now()
     return d, last_updated
 
+print "Guess who's back..."
 games, last_updated = _create_schedule()
 
 __pdoc__['nflgame.sched.games'] = """
