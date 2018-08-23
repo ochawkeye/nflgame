@@ -371,6 +371,8 @@ def combine_play_stats(games):
     N.B. Since this combines *all* play data, this function may take a while
     to complete depending on the number of games passed in.
     """
+    if not games:
+        return []
     return reduce(lambda p1, p2: p1 + p2,
                   [g.drives.players() for g in games if g is not None])
 
